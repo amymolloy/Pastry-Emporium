@@ -1,0 +1,114 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.pastry-list {
+    text-align: center;
+}
+.images {
+    width: 58%;
+}
+
+.display-4 {
+    letter-spacing: 3px;
+    text-shadow: 3px 2px #cb9fbf;
+}
+
+.each-pastry {
+    width: 50%;
+    min-height: 40%;
+    text-align: center;
+    padding: 10px;
+    margin-left: 25%;
+}
+
+    .each-pastry h3 {
+        color: #ffffff;
+        background-color: #d49fa7;
+        padding: 7px 0;
+    }
+
+    .each-pastry p:last-child {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        padding-top: 10px;
+    }
+
+    .each-pastry img {
+        min-width: 50%;
+        max-width: 100%;
+        min-height: 50%;
+        max-height: 100%;
+    }
+
+.slogon {
+    letter-spacing: 3px;
+}
+
+.text-center {
+    background-color: #e4d4e0;
+    padding: 0.03px;
+}
+
+.home-info {
+    margin-top: 10px;
+}
+
+.home-img {
+    position: relative;
+    width: 100px;
+}
+

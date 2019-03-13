@@ -1,0 +1,85 @@
+﻿@model IEnumerable<PastryEmporium.Models.Pastry>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <img class="home-img" style="width: 18%; margin-left: -25%" src="~/imgs/cupcake.gif" />
+    <h1 class="display-4">Welcome to the Pastry Emporium!</h1>
+    <p class="slogon">
+        Happiness Starts Here
+        <br />Chase Perfection | Catch Excellence
+    </p>
+</div>
+
+<div class="home-info">
+    <h3>
+        About Pastry Emporium
+    </h3>
+    <p>
+        In vitae auctor sapien, eu vulputate nunc. Nam et dui eget dui elementum bibendum. Proin
+        volutpat justo diam, sed congue tortor rhoncus ac? Nam cursus justo nec mi ornare pharetra? Mauris ut
+        sollicitudin diam? Aliquam rhoncus eu libero eget facilisis! Pellentesque euismod, sapien non
+        ullamcorper efficitur, quam dui viverra eros, non tristique quam neque a purus.
+
+        <br /><br />Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...
+        Nunc acquam scelerisque, pellentesque ex vitae, vulputate eros. Vivamus sodales ante quis enim pharetra,
+        viverra cursus mauris pretium.
+
+        <br /><br />Curabitur eleifend sagittis maximus. Quisque sit amet felis augue. Pellentesque vel venenatis
+        tellus. Suspendisse at felis sem. Vivamus ligula enim, suscipit at sodales et, fringilla ac justo.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer et neque nec leo vehicula
+        interdum. Morbi at sem vehicula, pharetra tortor id, egestas lectus. Donec mollis id tellus sed
+        facilisis. Suspendisse non neque nisl. Praesent tristique facilisis mattis. Quisque eget gravida dui.
+        Duis in facilisis leo. Aenean et lacus vel neque pharetra consequat.
+
+        <br /><br />Integer rutrum, libero non accumsan facilisis, turpis orci gravida metus, vitae auctor sapien
+        enim quis nulla. In hac habitasse platea dictumst.
+
+        <br /><br />Proin molestie efficitur nisl, non scelerisque diam volutpat a. <i>
+            Maecenas sit amet eros efficitur,
+            volutpat arcu a, lobortis neque.</i>
+    </p>
+</div>
+
+<div class="container">
+    <div stylclass=" pastry-list">
+        <h4 style="text-align: center">
+            Available Pastries
+        </h4>
+        @foreach (var item in Model)
+        {
+            <a asp-controller="Pastries" asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none; 
+            color: black;">
+                <div class="each-pastry">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </h3>
+                    <p class="description">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </p>
+                    <img src="@Url.Content(item.ThumbnailUrl)" alt="images" /> 
+                    <p>
+                        €@Html.DisplayFor(modelItem => item.Price)
+                    </p>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
+<div class="final-info">
+    <h4 class="final-heading">
+        <br />Don't like what you see?
+    </h4>
+    <p class="final-paragraphs">
+        Were you unable to find a pastry to your liking? Do you have a recommendation
+        as to what pastries we should add to our shop? Ius omnes timeam concludaturque ne. Integre cotidieque 
+        te cum, ea cibo exerci aliquid has. Ea doming regione usu, ei his meis molestiae. Usu te impedit 
+        voluptua interesset, cu tamquam ceteros vis. Sumo brute discere eos eu, id pro iuvaret docendi, ne 
+        impetus dolorem nostrum his.
+        <br /><br /><a asp-controller="Feedback" asp-action="Create">Contact us</a> with any suggestions you may
+        have and we'll make sure to have your favourite treats ready for you for your next visit!
+    </p>
+</div>
+
